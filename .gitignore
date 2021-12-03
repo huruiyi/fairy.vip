@@ -140,3 +140,4 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/hexo,node
 /package-lock.json
 .idea
+.DS_Store
