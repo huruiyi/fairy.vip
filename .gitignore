@@ -6,7 +6,7 @@
 db.json
 public/
 .deploy_git/
-
+.idea
 ### Node ###
 # Logs
 logs
@@ -139,3 +139,4 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/hexo,node
 /package-lock.json
+.idea

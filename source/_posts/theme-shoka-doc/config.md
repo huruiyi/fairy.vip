@@ -13,18 +13,18 @@ audio:
 ---
 
 :::primary
-[:rocket:快速开始](/computer-science/note/theme-shoka-doc/) - [:love_letter:依赖插件](/computer-science/note/theme-shoka-doc/dependents/) - [**:pushpin:基本配置**](/computer-science/note/theme-shoka-doc/config/) - [:rainbow:界面显示](/computer-science/note/theme-shoka-doc/display/) - [:unicorn:特殊功能](/computer-science/note/theme-shoka-doc/special/)
+[:rocket:快速开始](/theme-shoka-doc/) - [:love_letter:依赖插件](/theme-shoka-doc/dependents/) - [**:pushpin:基本配置**](/theme-shoka-doc/config/) - [:rainbow:界面显示](/theme-shoka-doc/display/) - [:unicorn:特殊功能](/theme-shoka-doc/special/)
 :::
 
 
 # 站点别称
-```yml
+```yaml
 alternate: Yume Shoka
 ```
 这里设置的名称代替Logo，显示在页面顶部，以及页尾:copyright:处
 
 # 静态文件目录
-```yml
+```yaml
 statics: / #//cdn.jsdelivr.net/gh/amehime/shoka@latest/
 ```
 默认值是`/`，指使用本地静态文件
