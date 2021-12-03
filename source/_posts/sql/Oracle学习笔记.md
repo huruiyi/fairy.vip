@@ -1,5 +1,7 @@
 ---
-title: Oracle学习笔记
+title: Oracle入门
+categories:
+- [SQL]
 ---
 
 [TOC]

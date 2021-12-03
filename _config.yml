@@ -68,6 +68,8 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  SQL: sql
+  Theme Shoka Documentation: theme-shoka-doc
 tag_map:
 
 # Metadata elements
