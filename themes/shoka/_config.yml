@@ -147,8 +147,8 @@ post:
 
 # Reward (Donate)
 reward:
-  # If true, reward will be displayed in every article by default.
-  enable: true
+  # If true, reward will be displayed in every article by default.-
+  enable: false # false：关闭打赏功能
   account:
     wechatpay: /wechatpay.png
     alipay: /alipay.png
