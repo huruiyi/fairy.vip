@@ -1,18 +1,5 @@
 <div class="status">
-	<div class="copyright">
-		<span class="item">
-			<a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2021035136号-1</a>
-		</span>
-	<div>
-  <div class="copyright">
-    {% set copyright_year = date(null, 'YYYY') %}
-    &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
-    <span itemprop="copyrightYear">{{ copyright_year }}</span>
-    <span class="with-love">
-      <i class="ic i-{{ theme.footer.icon.name }}"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">{{ author }} @ {{ alternate if alternate else title}}</span>
-  </div>
+
 
   {%- if theme.footer.count %}
   <div class="count">
@@ -34,4 +21,30 @@
     {{ __('footer.powered', _url('https://hexo.io', 'Hexo') + ' & Theme.' + _url('https://github.com/amehime/hexo-theme-shoka', 'Shoka')) }}
   </div>
   {%- endif %}
+
+
+<div class="copyright">
+  {% set copyright_year = date(null, 'YYYY') %}
+  &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
+  <span itemprop="copyrightYear">{{ copyright_year }}</span>
+  <span class="with-love">
+    <i class="ic i-{{ theme.footer.icon.name }}"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">{{ author }} @ {{ alternate if alternate else title}}</span>
+</div>
+<div class="copyright" >
+  <span class="item">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41132902001137" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+      <img src="{{full_url_for('/images/ba.png')}}" style="float:left;" />
+      <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+        豫公网安备41132902001137号
+      </p>
+    </a>
+    <a href="https://beian.miit.gov.cn/" target="_blank" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+      <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+        豫ICP备2021035136号-1
+      </p>
+    </a>
+  </span>
+</div>
 </div>

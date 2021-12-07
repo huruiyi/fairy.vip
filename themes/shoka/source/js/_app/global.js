@@ -38,7 +38,7 @@ const Loader = {
   hide: function(sec) {
     if(!CONFIG.loader.start)
       sec = -1
-    this.timer = setTimeout(this.vanish, sec||3000);
+    this.timer = setTimeout(this.vanish, sec||300);
   },
   vanish: function() {
     if(Loader.lock)
@@ -141,7 +141,7 @@ const visibilityListener = function () {
         $('[rel="icon"]').attr('href', statics + CONFIG.favicon.normal);
         document.title = LOCAL.favicon.show;
         if(CONFIG.loader.switch)
-          Loader.hide(1000)
+          Loader.hide(500)
         titleTime = setTimeout(function () {
           document.title = originTitle;
         }, 2000);
@@ -164,7 +164,7 @@ const showtip = function(msg) {
     setTimeout(function() {
       BODY.removeChild(tipbox);
     }, 300);
-  }, 3000);
+  }, 300);
 }
 
 const resizeHandle = function (event) {
