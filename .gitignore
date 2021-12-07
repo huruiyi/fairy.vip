@@ -141,3 +141,4 @@ dist
 /package-lock.json
 .idea
 .DS_Store
+/themes/shoka/package-lock.json
