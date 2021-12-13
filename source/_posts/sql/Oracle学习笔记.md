@@ -1,6 +1,6 @@
 ---
-title: Oracle入门
-date: 
+title: Oracle学习笔记
+sticky: true
 categories:
 - [SQL]
 ---
