@@ -64,6 +64,7 @@ category_map:
   SQL: sql
   Theme Shoka Documentation: theme-shoka-doc
   Nginx: nginx
+  Java: java
 tag_map:
 
 # Metadata elements
