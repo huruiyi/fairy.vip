@@ -51,7 +51,20 @@ nginx-1.21.5.tar.gz
 `安装配置：`
 
 ```yaml
-sudo ./configure  --prefix=/home/huruiyi/soft/app/nginx  --pid-path=/home/huruiyi/soft/app/nginx/pid/nginx.pid  --lock-path=/lock/nginx.lock  --error-log-path=/home/huruiyi/soft/app/nginx/log/error.log  --http-log-path=/home/huruiyi/soft/app/nginx/log/access.log  --http-client-body-temp-path=/home/huruiyi/soft/app/nginx/temp/client  --http-proxy-temp-path=/home/huruiyi/soft/app/nginx/temp/proxy  --http-fastcgi-temp-path=/home/huruiyi/soft/app/nginx/temp/fastcgi  --http-uwsgi-temp-path=/home/huruiyi/soft/app/nginx/temp/uwsgi  --http-scgi-temp-path=/home/huruiyi/soft/app/nginx/temp/scgi  --with-http_ssl_module  --with-http_gzip_static_module  --with-openssl=/home/huruiyi/soft/openssl-1.1.1m
+sudo ./configure  \
+--prefix=/home/huruiyi/soft/app/nginx  \
+--pid-path=/home/huruiyi/soft/app/nginx/pid/nginx.pid  \
+--lock-path=/lock/nginx.lock  \
+--error-log-path=/home/huruiyi/soft/app/nginx/log/error.log  \
+--http-log-path=/home/huruiyi/soft/app/nginx/log/access.log  \
+--http-client-body-temp-path=/home/huruiyi/soft/app/nginx/temp/client  \
+--http-proxy-temp-path=/home/huruiyi/soft/app/nginx/temp/proxy  \
+--http-fastcgi-temp-path=/home/huruiyi/soft/app/nginx/temp/fastcgi  \
+--http-uwsgi-temp-path=/home/huruiyi/soft/app/nginx/temp/uwsgi  \
+--http-scgi-temp-path=/home/huruiyi/soft/app/nginx/temp/scgi  \
+--with-http_ssl_module  \
+--with-http_gzip_static_module  
+
 ```
 
 `执行结果：`
