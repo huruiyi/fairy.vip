@@ -619,13 +619,13 @@ imp username/password@host/listener file = D:\xx\xx.dmp log = D:\xx\xx.log full 
   "FCIL_CDE" VARCHAR2(20) NOT NULL ENABLE )
   
   
-1	1                               	e1dadd566f894627b26a19ee347ac788	APU02
-2	2                               	e1dadd566f894627b26a19ee347ac788	APU01
-3	3                               	e1dadd566f894627b26a19ee347ac788	APU03
-4	4                               	e1dadd566f894627b26a19ee347ac788	AQG01
-5	5                               	9d630d6df637484ab6f966e47a077d00	BHY01
-6	6                               	9d630d6df637484ab6f966e47a077d00	BHY02
-7	7                               	9d630d6df637484ab6f966e47a077d00	APU02
+    1	1 	e1dadd566f894627b26a19ee347ac788	APU02
+    2	2 	e1dadd566f894627b26a19ee347ac788	APU01
+    3	3	e1dadd566f894627b26a19ee347ac788	APU03
+    4	4	e1dadd566f894627b26a19ee347ac788	AQG01
+    5	5	9d630d6df637484ab6f966e47a077d00	BHY01
+    6	6 	9d630d6df637484ab6f966e47a077d00	BHY02
+    7	7 	9d630d6df637484ab6f966e47a077d00	APU02
 
   
 SELECT TRF_GROUP_UUID,
@@ -642,7 +642,7 @@ GROUP BY
 
 # 表字段-注释
 
-```
+```sql
 select t.*
   from ALL_OBJECTS t
  where t.OBJECT_TYPE = 'TABLE'
@@ -690,3 +690,19 @@ select *
 Comment on column Biz_Task.Id is '主键'
 ```
 
+
+# 锁
+  ## 死锁查看
+  ```sql
+  SELECT object_name, machine, s.sid, s.serial#
+  FROM gv$locked_object l, dba_objects o, gv$session s
+ WHERE l.object_id = o.object_id
+   AND l.session_id = s.sid
+ order by s.sid;
+  ```
+  ## 杀掉死锁
+  ```sql
+  alter system kill session '317,36633';
+  ```
+  ## PL/SQL工具查看
+  `工具->会话`
