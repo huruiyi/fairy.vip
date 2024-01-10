@@ -44,7 +44,7 @@ sudo apt install libpcre3-dev
 `nginx版本和ssl版本：`
 
 ```yaml
-openssl-1.1.1m.tar.gz
+openssl-3.2.0.tar.gz
 nginx-1.21.5.tar.gz
 ```
 
@@ -63,7 +63,8 @@ sudo ./configure  \
 --http-uwsgi-temp-path=/home/huruiyi/soft/app/nginx/temp/uwsgi  \
 --http-scgi-temp-path=/home/huruiyi/soft/app/nginx/temp/scgi  \
 --with-http_ssl_module  \
---with-http_gzip_static_module  
+--with-http_gzip_static_module \
+--with-openssl=/home/huruiyi/soft/openssl-3.2.0
 
 ```
 
@@ -72,14 +73,14 @@ sudo ./configure  \
 ```yaml
 Configuration summary
   + using system PCRE library
-  + using OpenSSL library: /home/huruiyi/soft/openssl-1.1.1m
+  + using OpenSSL library: /home/huruiyi/soft/openssl-3.2.0
   + using system zlib library
 
   nginx path prefix: "/home/huruiyi/soft/app/nginx"
   nginx binary file: "/home/huruiyi/soft/app/nginx/sbin/nginx"
   nginx modules path: "/home/huruiyi/soft/app/nginx/modules"
   nginx configuration prefix: "/home/huruiyi/soft/app/nginx/conf"
-  nginx configuration file: "/home/huruiyi/soft/app/ngin/conf/nginx.conf"
+  nginx configuration file: "/home/huruiyi/soft/app/nginx/conf/nginx.conf"
   nginx pid file: "/home/huruiyi/soft/app/nginx/pid/nginx.pid"
   nginx error log file: "/home/huruiyi/soft/app/nginx/log/error.log"
   nginx http access log file: "/home/huruiyi/soft/app/nginx/log/access.log"
