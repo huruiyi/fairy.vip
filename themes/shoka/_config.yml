@@ -96,8 +96,7 @@ menu:
   #friends: /friends/ || heart
   links:
      Github: https://github.com/huruiyi || github || "#191717"
-     Vben: https://fairy.vip/vben || github || "#191717"
-     Antd: https://fairy.vip/antd || github || "#191717"
+     Vben: https://vben.fairy.vip || github || "#191717"
 
 # Social Links
 # Usage: `Key: permalink || icon || color`

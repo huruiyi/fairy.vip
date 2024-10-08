@@ -1,4 +1,9 @@
-获取硬件信息，可以利用`System.Management`命名空间下的`ManagementClass`和`ManagementObjectSearcher`类。以下是一些获取常见硬件信息的示例代码：
+---
+title: C#-获取硬件信息
+categories:
+- [C#]
+---
+硬件信息，可以利用`System.Management`命名空间下的`ManagementClass`和`ManagementObjectSearcher`类。以下是一些获取常见硬件信息的示例代码：
 
 ### 1. 获取CPU信息
 

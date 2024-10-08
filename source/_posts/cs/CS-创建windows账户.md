@@ -1,3 +1,8 @@
+---
+title: C#-创建windows账户
+categories:
+- [C#]
+---
 在Windows环境中，创建用户账户通常涉及到操作系统的底层API调用或者使用系统管理工具如`net user`命令行工具来进行。直接通过C#代码来创建用户账户需要利用.NET Framework中的System.DirectoryServices命名空间，这主要用于与活动目录（Active Directory）交互。如果你的环境是非域环境（例如家庭版Windows），直接通过C#代码创建本地用户可能会比较受限，因为这通常需要管理员权限并且没有直接的.NET API公开此功能。
 
 ### 对于域环境（Active Directory）
