@@ -44,28 +44,27 @@ sudo apt install libpcre3-dev
 `nginx版本和ssl版本：`
 
 ```yaml
-openssl-3.2.0.tar.gz
-nginx-1.21.5.tar.gz
+openssl-3.4.0.tar.gz
+nginx-1.27.2.tar.gz
 ```
 
 `安装配置：`
 
 ```yaml
 sudo ./configure  \
---prefix=/home/huruiyi/soft/app/nginx  \
---pid-path=/home/huruiyi/soft/app/nginx/pid/nginx.pid  \
---lock-path=/lock/nginx.lock  \
---error-log-path=/home/huruiyi/soft/app/nginx/log/error.log  \
---http-log-path=/home/huruiyi/soft/app/nginx/log/access.log  \
---http-client-body-temp-path=/home/huruiyi/soft/app/nginx/temp/client  \
---http-proxy-temp-path=/home/huruiyi/soft/app/nginx/temp/proxy  \
---http-fastcgi-temp-path=/home/huruiyi/soft/app/nginx/temp/fastcgi  \
---http-uwsgi-temp-path=/home/huruiyi/soft/app/nginx/temp/uwsgi  \
---http-scgi-temp-path=/home/huruiyi/soft/app/nginx/temp/scgi  \
---with-http_ssl_module  \
---with-http_gzip_static_module \
---with-openssl=/home/huruiyi/soft/openssl-3.2.0
-
+    --prefix=/home/huruiyi/app/nginx  \
+    --pid-path=/home/huruiyi/app/nginx/pid/nginx.pid  \
+    --lock-path=/lock/nginx.lock  \
+    --error-log-path=/home/huruiyi/app/nginx/log/error.log  \
+    --http-log-path=/home/huruiyi/app/nginx/log/access.log  \
+    --http-client-body-temp-path=/home/huruiyi/app/nginx/temp/client  \
+    --http-proxy-temp-path=/home/huruiyi/app/nginx/temp/proxy  \
+    --http-fastcgi-temp-path=/home/huruiyi/app/nginx/temp/fastcgi  \
+    --http-uwsgi-temp-path=/home/huruiyi/app/nginx/temp/uwsgi  \
+    --http-scgi-temp-path=/home/huruiyi/app/nginx/temp/scgi  \
+    --with-http_ssl_module  \
+    --with-http_gzip_static_module \
+    --with-openssl=/home/huruiyi/soft/openssl-3.4.0
 ```
 
 `执行结果：`
@@ -73,22 +72,22 @@ sudo ./configure  \
 ```yaml
 Configuration summary
   + using system PCRE library
-  + using OpenSSL library: /home/huruiyi/soft/openssl-3.2.0
+  + using OpenSSL library: /home/huruiyi/soft/openssl-3.4.0
   + using system zlib library
 
-  nginx path prefix: "/home/huruiyi/soft/app/nginx"
-  nginx binary file: "/home/huruiyi/soft/app/nginx/sbin/nginx"
-  nginx modules path: "/home/huruiyi/soft/app/nginx/modules"
-  nginx configuration prefix: "/home/huruiyi/soft/app/nginx/conf"
-  nginx configuration file: "/home/huruiyi/soft/app/nginx/conf/nginx.conf"
-  nginx pid file: "/home/huruiyi/soft/app/nginx/pid/nginx.pid"
-  nginx error log file: "/home/huruiyi/soft/app/nginx/log/error.log"
-  nginx http access log file: "/home/huruiyi/soft/app/nginx/log/access.log"
-  nginx http client request body temporary files: "/home/huruiyi/soft/app/nginx/temp/client"
-  nginx http proxy temporary files: "/home/huruiyi/soft/app/nginx/temp/proxy"
-  nginx http fastcgi temporary files: "/home/huruiyi/soft/app/nginx/temp/fastcgi"
-  nginx http uwsgi temporary files: "/home/huruiyi/soft/app/nginx/temp/uwsgi"
-  nginx http scgi temporary files: "/home/huruiyi/soft/app/nginx/temp/scgi"
+  nginx path prefix: "/home/huruiyi/app/nginx"
+  nginx binary file: "/home/huruiyi/app/nginx/sbin/nginx"
+  nginx modules path: "/home/huruiyi/app/nginx/modules"
+  nginx configuration prefix: "/home/huruiyi/app/nginx/conf"
+  nginx configuration file: "/home/huruiyi/app/nginx/conf/nginx.conf"
+  nginx pid file: "/home/huruiyi/app/nginx/pid/nginx.pid"
+  nginx error log file: "/home/huruiyi/app/nginx/log/error.log"
+  nginx http access log file: "/home/huruiyi/app/nginx/log/access.log"
+  nginx http client request body temporary files: "/home/huruiyi/app/nginx/temp/client"
+  nginx http proxy temporary files: "/home/huruiyi/app/nginx/temp/proxy"
+  nginx http fastcgi temporary files: "/home/huruiyi/app/nginx/temp/fastcgi"
+  nginx http uwsgi temporary files: "/home/huruiyi/app/nginx/temp/uwsgi"
+  nginx http scgi temporary files: "/home/huruiyi/app/nginx/temp/scgi"
 ```
 
 `安装：`
