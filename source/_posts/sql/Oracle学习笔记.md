@@ -256,7 +256,29 @@ select * from product_component_version;
 select * from v$instance
 ```
 
+## 日期转换
 
+```sql
+select to_date('2024-12-20 18:14:20','yyyy-MM-DD HH24:mi:ss') from dual;
+select to_date('2024-12-20','yyyy-MM-DD') from dual
+
+--mi是分钟
+select to_char(sysdate,'yyyy-MM-dd HH24:mi:ss') from dual;
+--mm会显示月份
+select to_char(sysdate,'yyyy-MM-dd HH24:mm:ss') from dual;
+
+select to_char(to_date('2024-12-20','yyyy-mm-dd'), 'yyyy') "year" from dual;
+select to_char(sysdate,'yyyy-mm-dd hh24:mi:ss') as nowTime from dual;   --日期转化为字符串
+ 
+select to_char(sysdate,'yyyy')  as nowYear   from dual;    --获取时间的年
+select to_char(sysdate,'mm')    as nowMonth  from dual;    --获取时间的月
+select to_char(sysdate,'dd')    as nowDay    from dual;    --获取时间的日
+select to_char(sysdate,'hh24')  as nowHour   from dual;    --获取时间的时
+select to_char(sysdate,'mi')    as nowMinute from dual;    --获取时间的分
+select to_char(sysdate,'ss')    as nowSecond from dual;    --获取时间的秒
+
+select to_char( to_date(2024,'J'),'Jsp') from dual         --显示Two Thousand Twenty-Four
+```
 
 # 触发器
 
