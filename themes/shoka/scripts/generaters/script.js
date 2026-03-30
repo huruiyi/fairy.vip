@@ -65,7 +65,8 @@ hexo.extend.generator.register('script', function(locals){
     siteConfig.fireworks = theme.fireworks.color || ["rgba(255,182,185,.9)", "rgba(250,227,217,.9)", "rgba(187,222,214,.9)", "rgba(138,198,209,.9)"]
   }
 
-  text = 'var CONFIG = ' + JSON.stringify(siteConfig) + ';' + text;
+  // Wrap the bundle in an IIFE so accidental double-loading does not clash on top-level const/let.
+  text = ';(function(){\nvar CONFIG = ' + JSON.stringify(siteConfig) + ';\n' + text + '\n})();';
 
   return {
       path: theme.js + '/app.js',
